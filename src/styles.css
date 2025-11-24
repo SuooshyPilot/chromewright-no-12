@@ -1,0 +1,89 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: #111;
+    font-family: "Courier New", Courier, monospace;
+}
+
+#frame {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(circle at top, #f8f1da 0, #f2e6c3 40%, #e7d7a7 100%);
+}
+
+header,
+footer {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #444;
+}
+
+header {
+    margin-bottom: 12px;
+}
+
+footer {
+    margin-top: 8px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.status {
+    font-style: italic;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+#editor {
+    width: 100%;
+    height: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 80px;
+    /* More generous padding like real paper */
+    border: none;
+    border-radius: 2px;
+    background: #fdfbf7;
+    /* Warmer paper tone */
+    resize: none;
+    font-size: 18px;
+    /* Slightly larger */
+    line-height: 2.0;
+    /* Double spacing */
+    color: #333;
+    outline: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    overflow-y: hidden;
+    /* Hide scrollbar for immersion, we will handle scrolling via JS if needed, or just let it scroll naturally but hidden */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+#editor::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+/* Cursor styling to look more mechanical? Hard to do with native textarea, but we can try caret-color */
+#editor {
+    caret-color: #d00;
+    /* Red ribbon cursor */
+}
